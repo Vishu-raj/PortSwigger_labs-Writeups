@@ -18,12 +18,12 @@ First, I logged into my own provided account (`wiener:peter`) to observe the nor
 **Step 2: Identifying the Target Endpoint**
 While logged into my own account, I made a specific note of the URL for the user dashboard: `/my-account`. I then logged out to test if the victim's account handled this endpoint securely.
 
-<!-- 📸 ADD YOUR BURP PROXY SCREENSHOT HERE (The one showing the GET /my-account request in the HTTP history) -->
+📸 ![Login Attempt](Screenshot_02.png)
 
 **Step 3: Initiating the Attack**
 I navigated back to the login page and entered the victim's known credentials (`carlos:montoya`).
 
-<!-- 📸 ADD YOUR LOGIN SCREENSHOT HERE (The one showing the credentials entered into the form) -->
+📸 ![Login Attempt](Screenshot_03.png) 
 
 **Step 4: Bypassing the 2FA Check**
 After submitting the credentials, the application prompted me for Carlos's 2FA verification code. Since I did not have this code, I tested for a logical bypass. Instead of attempting to guess the code, I manually changed the URL in the browser's address bar to the dashboard endpoint I identified earlier: `/my-account`.
