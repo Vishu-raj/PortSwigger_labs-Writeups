@@ -33,3 +33,4 @@ With the confirmed credentials (`antivirus` : `777777`), I navigated back to the
 
 ## 🧠 Key Takeaways
 This lab highlights the critical importance of analyzing HTTP response variations. Using Burp Intruder to monitor status codes (`302 Found` vs `200 OK`) and response lengths is a highly effective methodology for confirming successful brute-force attacks without needing to write custom automation scripts.
+
