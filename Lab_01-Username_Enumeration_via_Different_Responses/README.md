@@ -14,17 +14,17 @@ The application suffers from an **Authentication Flaw** that allows username enu
 **Step 1: Intercepting the Authentication Traffic**
 To begin, I attempted a login with dummy credentials and intercepted the `POST /login` request using Burp Suite to analyze the parameters being sent to the server.
 
-<!-- 📸 ADD YOUR REPEATER SCREENSHOT HERE (The one showing the POST /login request and 302 Found response) -->
+📸 ![Burp Repeater](Screenshot_03.png)
 
 **Step 2: Configuring the Payload**
 After successfully enumerating the valid username (`antivirus`), I sent the request to **Burp Intruder** to brute-force the password. I configured the payload position and loaded the provided dictionary of candidate passwords.
 
-<!-- 📸 ADD YOUR INTRUDER SETUP SCREENSHOT HERE (The one showing the Payloads tab and the list of numbers) -->
+📸 ![Intruder Payloads](Screenshot_02.png)
 
 **Step 3: Analyzing Intruder Results**
 I initiated the Sniper attack and monitored the results. I paid close attention to the HTTP status codes and response lengths. While incorrect passwords returned a standard `200 OK` status, the payload `777777` returned a `302 Found` status with a significantly different response length (191 bytes). This anomaly confirmed a successful authentication attempt.
 
-<!-- 📸 ADD YOUR INTRUDER RESULTS SCREENSHOT HERE (The one highlighting the '777777' payload and the 302 status code) -->
+📸 ![Intruder Results](Screenshot_04.png) 
 
 **Step 4: Account Takeover**
 With the confirmed credentials (`antivirus` : `777777`), I navigated back to the login page, submitted the credentials, and successfully accessed the account to solve the lab.
