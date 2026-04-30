@@ -29,7 +29,7 @@ I initiated the Sniper attack and monitored the results. I paid close attention 
 **Step 4: Account Takeover**
 With the confirmed credentials (`antivirus` : `777777`), I navigated back to the login page, submitted the credentials, and successfully accessed the account to solve the lab.
 
-<!-- 📸 ADD YOUR SOLVED LAB SCREENSHOT HERE (The one showing the "Congratulations, you solved the lab!" banner) -->
+📸 ![Lab Solved](Screenshot_01.png)
 
 ## 🧠 Key Takeaways
 This lab highlights the critical importance of analyzing HTTP response variations. Using Burp Intruder to monitor status codes (`302 Found` vs `200 OK`) and response lengths is a highly effective methodology for confirming successful brute-force attacks without needing to write custom automation scripts.
